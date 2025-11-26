@@ -1,0 +1,22 @@
+:root{
+  --c-1: rgb(203,33,23);
+  --c-2: rgb(233,71,31);
+  --c-3: rgb(243,206,175);
+  --c-4: rgb(240,200,174);
+  --c-5: rgb(236,165,83);
+  --c-6: rgb(170,50,39);
+  --c-7: rgb(223,147,120);
+  --c-8: rgb(204,81,58);
+
+  --bg-page: var(--c-3);
+  --surface: #ffffff;
+  --text: #222222;
+  --muted-text: #555555;
+  --primary: var(--c-1);
+  --primary-strong: var(--c-6);
+  --accent: var(--c-5);
+  --border: rgba(0,0,0,0.08);
+  --shadow: 0 6px 18px rgba(0,0,0,0.06);
+  --radius: 18px;
+  --shadow-soft: 0 10px 24px rgba(0,0,0,0.16);
+}

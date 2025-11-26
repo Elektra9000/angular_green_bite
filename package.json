@@ -2,6 +2,7 @@
   "name": "progetto-angular-2",
   "version": "0.0.0",
   "scripts": {
+    "fetch:thumbs": "node fetch-thumbs.js",
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
@@ -10,6 +11,7 @@
   },
   "private": true,
   "dependencies": {
+    "@angular/animations": "^19.2.15",
     "@angular/common": "^19.2.0",
     "@angular/compiler": "^19.2.0",
     "@angular/core": "^19.2.0",

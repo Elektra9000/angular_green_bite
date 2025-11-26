@@ -1,0 +1,10 @@
+<div class="card">
+  <img [src]="thumb" [alt]="fruit.name" />
+  <div class="info">
+    <h3>{{ fruit.name }}</h3>
+    <p *ngIf="fruit.nutritions">
+      Kcal: {{ fruit.nutritions.calories }} • Sugar:
+      {{ fruit.nutritions.sugar }}g
+    </p>
+  </div>
+</div>

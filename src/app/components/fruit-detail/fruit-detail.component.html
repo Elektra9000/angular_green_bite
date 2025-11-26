@@ -1,0 +1,21 @@
+<div class="detail" *ngIf="fruit; else loading">
+  <button class="back" routerLink="/" type="button" aria-label="Go back">
+    ← Back
+  </button>
+
+  <h2>{{ fruit.name }}</h2>
+
+  <p><strong>Genus</strong> {{ fruit.genus }}</p>
+  <p><strong>Family</strong> {{ fruit.family }}</p>
+
+  <h3>Nutritional values</h3>
+  <ul>
+    <li>Calories: {{ fruit.nutritions?.calories }}</li>
+    <li>Sugar: {{ fruit.nutritions?.sugar }} g</li>
+    <li>Fat: {{ fruit.nutritions?.fat }} g</li>
+    <li>Carbohydrates: {{ fruit.nutritions?.carbohydrates }} g</li>
+    <li>Protein: {{ fruit.nutritions?.protein }} g</li>
+  </ul>
+</div>
+
+<ng-template #loading><p>Loading...</p></ng-template>

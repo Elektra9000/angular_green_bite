@@ -1,1 +1,114 @@
-/* You can add global styles to this file, and also import other style files */
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background: transparent;
+  min-width: 320px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body.use-global-green {
+  background: linear-gradient(90deg, #2aa14a 0%, #1f8f3a 50%, #198a3d 100%);
+}
+
+app-root,
+.app-root,
+.site-wrapper,
+.page,
+.main-container {
+  background: transparent;
+  margin: 0;
+  padding: 0;
+}
+
+.top-nav.simple-nav {
+  width: 100%;
+  left: 0;
+  margin: 0;
+  border: none;
+  background: linear-gradient(90deg, #2aa14a 0%, #1f8f3a 50%, #198a3d 100%);
+}
+
+.nav-inner,
+.container {
+  background: transparent;
+}
+
+.leaf-img--circle {
+  background: #fff;
+  border-radius: 50%;
+  padding: 4px;
+  display: inline-block;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+}
+
+h1,
+h2 {
+  font-family: "Exo 2", sans-serif;
+}
+
+.logo {
+  font-family: "Birthstone", cursive;
+}
+
+.signature {
+  font-family: "League Script", cursive;
+}
+
+:root {
+  --primary-1: #cb2123;
+  --primary-2: #e9471f;
+  --green-1: #2aa14a;
+  --green-2: #1f8f3a;
+  --green-3: #198a3d;
+  --radius: 12px;
+  --border: rgba(0, 0, 0, 0.06);
+  --surface: #fff;
+  --muted-text: #7a7a7a;
+  --shadow-strong: 0 24px 56px rgba(203, 33, 23, 0.2);
+}
+
+/* compact primary button visuals */
+.btn-primary {
+  background: linear-gradient(180deg, var(--primary-1), var(--primary-2));
+  color: #fff;
+  border-radius: 24px;
+  padding: 12px 20px;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  box-shadow: var(--shadow-strong);
+  font-weight: 800;
+}
+.btn-ghost {
+  background: linear-gradient(180deg, var(--primary-1), var(--primary-2));
+  color: #fff;
+  border-radius: 20px;
+  padding: 8px 12px;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  box-shadow: 0 18px 42px rgba(203, 33, 23, 0.16);
+  font-weight: 800;
+}
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+}
+
+/* MOVED FROM home.component.css -> GLOBAL (keeps exact colors and shadows) */
+.search-bar.exo {
+  background: linear-gradient(
+    180deg,
+    rgba(203, 33, 23, 0.98),
+    rgba(233, 71, 31, 0.96)
+  );
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: 0 28px 60px rgba(170, 50, 39, 0.18), inset 0 1px 0 rgba(255, 255, 255, 0.04);
+}
+
+.search-bg::after {
+  background: linear-gradient(rgba(0, 0, 0, 0.08), rgba(0, 0, 0, 0.16));
+}

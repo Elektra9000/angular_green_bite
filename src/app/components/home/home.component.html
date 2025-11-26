@@ -1,0 +1,50 @@
+<header class="top-nav simple-nav">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <div class="nav-inner">
+    <a class="brand" href="/" aria-label="Greenbite home">
+      <img src="assets/leaves-icon.png" alt="Foglia Greenbite" class="leaf-img" />
+      <span class="site-name">Greenbite</span>
+    </a>
+  </div>
+</header>
+
+<div class="search-area" [ngStyle]="{ 'background-image': 'url(/assets/search-bg.png)' }">
+  <div class="search-bg" aria-hidden="true"></div>
+  <div class="search-inner">
+    <div class="search-wrapper">
+      <input
+        [formControl]="control"
+        class="search-bar exo"
+        placeholder="Search for a fruit (e.g. banana)."
+        aria-label="Search for a fruit"
+      />
+      <button class="btn-primary" (click)="onSearch(control.value || '')">
+        Search
+      </button>
+    </div>
+  </div>
+</div>
+
+<div class="results" *ngIf="!loading && fruits.length > 0; else emptyOrLoading">
+  <app-fruit-card *ngFor="let f of fruits" [fruit]="f" (click)="openDetail(f.name)"></app-fruit-card>
+</div>
+
+<ng-template #emptyOrLoading>
+  <div *ngIf="loading" class="loading">Loading...</div>
+  <div *ngIf="!loading && fruits.length === 0" class="no-results">No results. Try searching for a fruit.</div>
+</ng-template>
+
+<div class="suggestions">
+  <h4>
+    Suggested fruits
+    <button class="btn-ghost" type="button" (click)="refreshSuggested()" aria-label="Shuffle suggested">
+      Shuffle
+    </button>
+  </h4>
+  <div class="thumbs">
+    <div class="thumb" *ngFor="let s of displayedSuggested" (click)="onSearch(s)">
+      <img [src]="getThumbUrl(s)" (error)="onThumbError($event)" [alt]="s" loading="lazy" />
+      <span>{{ s }}</span>
+    </div>
+  </div>
+</div>
