@@ -1,11 +1,11 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
+import { environment } from '../../environments/environment.prod';
 
 export interface Fruit {
   name: string;
-  image?: string; // ✅ aggiunto
-
+  image?: string;
   genus?: string;
   family?: string;
   order?: string;
@@ -20,14 +20,15 @@ export interface Fruit {
 
 @Injectable({ providedIn: 'root' })
 export class FruityService {
-  private base = '/api/fruit';
+  private base = environment.apiUrl; // https://www.fruityvice.com
+
   constructor(private http: HttpClient) {}
 
   getAll(): Observable<Fruit[]> {
-    return this.http.get<Fruit[]>(`${this.base}/all`);
+    return this.http.get<Fruit[]>(`${this.base}/api/fruit/all`);
   }
 
   getByName(name: string): Observable<any> {
-    return this.http.get<any>(`${this.base}/${encodeURIComponent(name)}`);
+    return this.http.get<any>(`${this.base}/api/fruit/${encodeURIComponent(name)}`);
   }
 }
