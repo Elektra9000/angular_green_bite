@@ -1,9 +1,0 @@
-[build]
-  command = "ng build"
-  publish = "dist/progetto-angular-2"
-  functions = "netlify/functions"
-
-[[redirects]]
-  from = "/*"
-  to = "/index.html"
-  status = 200
