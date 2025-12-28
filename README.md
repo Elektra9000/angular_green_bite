@@ -97,6 +97,6 @@ GreenBite is deployed on Netlify using:
 - netlify/functions as the serverless functions directory
   
 Live website:
-👉 [Visit GreenBite Live](green-bite-angular2.netlify.app)
+👉 [Visit GreenBite Live](https://green-bite-angular2.netlify.app/)
 
 
