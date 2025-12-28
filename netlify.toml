@@ -1,6 +1,7 @@
 [build]
-  command = "npm run build"
-  publish = "dist/progetto-angular-2"  # <-- controlla il nome esatto
+  command = "ng build"
+  publish = "dist/progetto-angular-2"
+  functions = "netlify/functions"
 
 [[redirects]]
   from = "/*"
