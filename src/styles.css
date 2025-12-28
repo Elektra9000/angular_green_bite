@@ -73,7 +73,6 @@ h2 {
   --shadow-strong: 0 24px 56px rgba(203, 33, 23, 0.2);
 }
 
-/* compact primary button visuals */
 .btn-primary {
   background: linear-gradient(180deg, var(--primary-1), var(--primary-2));
   color: #fff;
@@ -98,7 +97,6 @@ h2 {
   border-radius: var(--radius);
 }
 
-/* MOVED FROM home.component.css -> GLOBAL (keeps exact colors and shadows) */
 .search-bar.exo {
   background: linear-gradient(
     180deg,

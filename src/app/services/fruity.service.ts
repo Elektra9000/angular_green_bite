@@ -20,15 +20,14 @@ export interface Fruit {
 
 @Injectable({ providedIn: 'root' })
 export class FruityService {
-  private base = environment.apiBaseUrl; // usa apiBaseUrl esistente
-
+  private base = environment.apiBaseUrl;
   constructor(private http: HttpClient) {}
 
   getAll(): Observable<Fruit[]> {
-    return this.http.get<Fruit[]>(`${this.base}/fruit/all`);
+    return this.http.get<Fruit[]>(`${this.base}/fruit-all`);
   }
 
   getByName(name: string): Observable<any> {
-    return this.http.get<any>(`${this.base}/fruit/${encodeURIComponent(name)}`);
-  }
+  return this.http.get<any>(`${this.base}/fruit/${encodeURIComponent(name)}`);
+}
 }
