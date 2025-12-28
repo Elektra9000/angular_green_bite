@@ -20,7 +20,8 @@ export interface Fruit {
 
 @Injectable({ providedIn: 'root' })
 export class FruityService {
-  private base = environment.apiBaseUrl;
+  private base = '/.netlify/functions';
+
   constructor(private http: HttpClient) {}
 
   getAll(): Observable<Fruit[]> {
@@ -28,6 +29,6 @@ export class FruityService {
   }
 
   getByName(name: string): Observable<any> {
-  return this.http.get<any>(`${this.base}/fruit/${encodeURIComponent(name)}`);
-}
+    return this.http.get<any>(`${this.base}/fruit/${encodeURIComponent(name)}`);
+  }
 }
