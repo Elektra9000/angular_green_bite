@@ -58,7 +58,7 @@ export class HomeComponent implements OnInit, OnDestroy {
         distinctUntilChanged(),
         filter(
           (v): v is string =>
-            v !== null && typeof v === 'string' && v.trim().length > 0
+            v !== null && typeof v === 'string' && v.trim().length >= 3
         )
       )
       .subscribe((v) => this.onSearch(v.trim()));
