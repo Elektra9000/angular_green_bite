@@ -1,0 +1,10 @@
+﻿
+src\app\services\fruity.service.ts:28:    return 
+this.http.get<Fruit[]>(`${this.base}/api/fruit/all`);
+src\app\services\fruity.service.ts:32:    return this
+.http.get<any>(`${this.base}/api/fruit/${encodeURICom
+ponent(name)}`);
+src\environments\environment.prod.ts:3:  apiUrl: 
+'/api'
+
+

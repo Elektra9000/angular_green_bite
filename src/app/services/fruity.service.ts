@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { environment } from '../../environments/environment.prod';
+import { environment } from '../../environments/environment';
 
 export interface Fruit {
   name: string;
@@ -20,7 +20,7 @@ export interface Fruit {
 
 @Injectable({ providedIn: 'root' })
 export class FruityService {
-  private base = environment.apiUrl; // https://www.fruityvice.com
+  private base = environment.apiBaseUrl; // usa apiBaseUrl esistente
 
   constructor(private http: HttpClient) {}
 
