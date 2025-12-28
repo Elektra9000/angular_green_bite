@@ -1,5 +1,9 @@
 # 🌿 GreenBite — Angular + Netlify Serverless Project
 
+![GreenBite UI](assets/readme/greenbite-screenshot.jpg)
+
+The homepage displays a searchable grid of fruits with calorie and sugar data, plus suggested fruit thumbnails.
+
 ## 🚀 Project Overview
 
 GreenBite is a lightweight Angular application designed to explore fruit data through a clean UI, fast search, and serverless API integration.
