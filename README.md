@@ -15,15 +15,18 @@ The backend is powered by Netlify Functions, which fetch fruit data from a publi
 
 ## 📂 Project Structure
 The application is organized into the following main sections:
+
 <u>Home Page</u>
 - Displays a grid of fruits
 - Includes a debounced search bar
 - Shows dynamic “Suggested Fruits” thumbnails
 - Suggested fruits are randomly shuffled on each visit or refresh  
 - Allows navigation to fruit detail pages
+  
 <u>Fruit Detail Page</u>
 - Shows detailed information for a selected fruit
 - Includes nutritional values and metadata
+  
 <u>Serverless API (Netlify Functions)</u>
 - /fruit-all — returns the full list of fruits
 - /fruit/:name — returns a single fruit by name
@@ -45,7 +48,6 @@ This project is built with:
 - TypeScript — type‑safe development
 - Angular Router — navigation and routing
 - CSS3 — custom responsive styling
-
 
 All dependencies are listed in <ul>package.json</ul>.
 No global installations required.
@@ -93,6 +95,7 @@ GreenBite is deployed on Netlify using:
 - npm run build as the build command
 - dist/progetto-angular-2 as the publish directory
 - netlify/functions as the serverless functions directory
+  
 Live website:
 👉 [Visit GreenBite Live](green-bite-angular2.netlify.app)
 
