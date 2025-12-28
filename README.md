@@ -1,6 +1,6 @@
 # 🌿 GreenBite — Angular + Netlify Serverless Project
 
-![GreenBite UI](assets/readme/greenbite-screenshot.png)
+![GreenBite UI](src/assets/readme/greenbite-screenshot.png)
 
 The homepage displays a searchable grid of fruits with calorie and sugar data, plus suggested fruit thumbnails.
 
