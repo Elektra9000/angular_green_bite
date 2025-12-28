@@ -1,59 +1,99 @@
-# ProgettoAngular2
+# 🌿 GreenBite — Angular + Netlify Serverless Project
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.19.
+## 🚀 Project Overview
 
-## Development server
+GreenBite is a lightweight Angular application designed to explore fruit data through a clean UI, fast search, and serverless API integration.
+The project uses Angular standalone components, RxJS, and Netlify Functions to deliver a smooth, responsive experience without the need for a traditional backend server.
 
-To start a local development server, run:
+Users can:
+- Browse a curated list of fruits
+- Search for fruits by name with a debounced, real‑time search bar
+- View detailed nutritional information
+- Explore suggested fruits with dynamic shuffling
+- Navigate through a clean, mobile‑friendly interface
+The backend is powered by Netlify Functions, which fetch fruit data from a public API and expose it through serverless endpoints.
 
-```bash
+## 📂 Project Structure
+The application is organized into the following main sections:
+<u>Home Page</u>
+- Displays a grid of fruits
+- Includes a debounced search bar
+- Shows dynamic “Suggested Fruits” thumbnails
+- Suggested fruits are randomly shuffled on each visit or refresh  
+- Allows navigation to fruit detail pages
+<u>Fruit Detail Page</u>
+- Shows detailed information for a selected fruit
+- Includes nutritional values and metadata
+<u>Serverless API (Netlify Functions)</u>
+- /fruit-all — returns the full list of fruits
+- /fruit/:name — returns a single fruit by name
+- Functions are located in:
+```sh
+/netlify/functions
+```
+<u>Assets</u>
+- Custom fruit thumbnails
+- Fallback images
+- Backgrounds and UI icons
+
+## 🧩 Main Technologies Used
+This project is built with:
+- Angular 19 — modern frontend framework
+- Standalone Components — no NgModules
+- RxJS — reactive programming for search and data streams
+- Netlify Functions — serverless backend
+- TypeScript — type‑safe development
+- Angular Router — navigation and routing
+- CSS3 — custom responsive styling
+
+
+All dependencies are listed in <ul>package.json</ul>.
+No global installations required.
+
+## ⚙ Installation & Development
+Clone the repository:
+```sh
+git clone https://github.com/Elektra9000/angular_green_bite
+cd angular_green_bite
+```
+
+Install dependencies:
+```sh
+npm install
+```
+
+Run the development server:
+```sh
 ng serve
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
-
-## Code scaffolding
-
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
-```bash
-ng generate component component-name
+The app will be available at:
+```sh
+http://localhost:4200/
 ```
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
-
-```bash
-ng generate --help
+## 🧪 Local API Development (Netlify Dev)
+To run the serverless functions locally:
+```sh
+netlify dev
 ```
 
-## Building
-
-To build the project run:
-
-```bash
-ng build
+This starts:
+- Angular frontend
+- Netlify Functions backend
+- Proxy routing so that API calls work automatically
+Local API endpoints:
+```sh
+http://localhost:8888/.netlify/functions/fruit-all
+http://localhost:8888/.netlify/functions/fruit/<name>
 ```
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+## 🌐 Deployment
+GreenBite is deployed on Netlify using:
+- npm run build as the build command
+- dist/progetto-angular-2 as the publish directory
+- netlify/functions as the serverless functions directory
+Live website:
+👉 [Visit GreenBite Live](green-bite-angular2.netlify.app)
 
-## Running unit tests
 
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
